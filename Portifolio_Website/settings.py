@@ -25,7 +25,7 @@ load_dotenv(os.path.join(BASE_DIR, ".env"))
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['web-production-b285.up.railway.app', 'pritchardmambambo.tech']
 
@@ -88,12 +88,12 @@ if DEBUG:
 else:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql',
+            'ENGINE': 'django.db.backends.mysql',
             'NAME': 'Portifolio_Website',
             'USER': os.getenv('USERNAME'),
             'PASSWORD': os.getenv('PASSWORD'),
             'HOST': 'localhost',
-            'PORT': '',
+            'PORT': '3306',
         }
     }
 
