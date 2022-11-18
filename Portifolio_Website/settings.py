@@ -88,12 +88,12 @@ if DEBUG:
 else:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.mysql',
+            'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'Portifolio_Website',
             'USER': os.getenv('USERNAME'),
             'PASSWORD': os.getenv('PASSWORD'),
             'HOST': 'localhost',
-            'PORT': '3306',
+            'PORT': '',
         }
     }
 
