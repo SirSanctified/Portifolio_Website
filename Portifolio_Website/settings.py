@@ -25,9 +25,9 @@ load_dotenv(os.path.join(BASE_DIR, ".env"))
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['web-production-b285.up.railway.app', 'pritchardmambambo.tech']
+ALLOWED_HOSTS = ['127.0.0.1', 'web-production-b285.up.railway.app', 'pritchardmambambo.tech']
 
 
 # Application definition
@@ -136,7 +136,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'media')
 ]
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'mediafiles'
