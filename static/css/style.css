@@ -186,6 +186,7 @@ a,
 .navCol a {
     font-size: 20px;
     color: #000;
+    background: #21243D;
     font-weight: var(--medium);
     display: inline-block;
     position: relative;
@@ -298,6 +299,11 @@ a,
     -webkit-transform: translateY(-6px) rotate(225deg);
     -ms-transform: translateY(-6px) rotate(225deg);
     transform: translateY(-6px) rotate(225deg);
+}
+
+.logoCol {
+    box-shadow: rgba(0, 0, 0, 0.1) -3px -3px 7px,
+        rgba(94, 104, 0, 0.3) 3px 3px 5px;
 }
 
 /*   /nav toggle */
