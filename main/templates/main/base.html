@@ -1,14 +1,15 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{% block title %}{%endblock %}</title>
+    <title>{% block title %}{{me.first_name + ' ' + me.last_name|title}}{%endblock %}</title>
     <meta name="author" content="Pritchard Mambambo aka Sir Sanctified">
-    <link rel="canonical" href="{{request.path}}"/>
-    <link rel="home" href="{% url 'main:home' %}"/>
+    <link rel="canonical" href="{{request.path}}" />
+    <link rel="home" href="{% url 'main:home' %}" />
     <meta name="description" content="{% block description %}{% endblock %}">
     <meta name="keywords" content="{% block keywords %}{% endblock %}">
 
@@ -26,8 +27,9 @@
     End CSS
     ================================= -->
 
-  </head>
-  <body>
+</head>
+
+<body>
     {% include 'main/partials/messages.html' %}
     {% include 'main/partials/nav.html' %}
 
@@ -47,5 +49,6 @@
     <!-- ================================
     End Scripts
     ================================= -->
-  </body>
+</body>
+
 </html>
