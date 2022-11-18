@@ -29,6 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'web-production-b285.up.railway.app', 'pritchardmambambo.tech']
 
+CSRF_TRUSTED_ORIGINS = ['https://pritchardmambambo.tech']
+
 
 # Application definition
 
